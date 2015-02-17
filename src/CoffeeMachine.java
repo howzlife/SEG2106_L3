@@ -16,6 +16,7 @@ public class CoffeeMachine
   private int cups;
   private int balance;
   private boolean water;
+  private Delivery del;
 
   //CoffeeMachine State Machines
   enum Machine { Idle, CheckBalance, CheckCups, Active, MakingTea, MakeTea, MakeCoffee, AddSugar, ReturnCoin }
@@ -34,6 +35,7 @@ public class CoffeeMachine
 
   public CoffeeMachine(Delivery del)
   {
+	this.del = del;
     cups = 10;
     balance = 0;
     water = true;
